@@ -3,21 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Chat Py</title>
-</head>
-<body>
 
-<div id="chat"></div>
-<div id="input_area">
-  <input id="username" type="text" placeholder="Your username" style="display: block; width: 200px"></input>
-  <textarea id="message" placeholder="Your message" style="display: block; width: 400px"></textarea>
-  <button onclick="sendMessage()" style="display: block">Send</button>
-</div>
-
-
-<script>
-  (function () {
-    'use strict';
-
+  <script>
     var ws;
 
     function createChatEntry(username, message) {
@@ -68,7 +55,15 @@
         messageContainer.appendChild(createChatEntry("[SYSTEM]", "WebSocket is NOT supported by your browser!"));
       }
     }
-  })();
 </script>
+</head>
+<body>
+
+<div id="chat"></div>
+<div id="input_area">
+  <input id="username" type="text" placeholder="Your username" style="display: block; width: 200px"></input>
+  <textarea id="message" placeholder="Your message" style="display: block; width: 400px"></textarea>
+  <button onclick="sendMessage()" style="display: block">Send</button>
+</div>
 </body>
 </html>

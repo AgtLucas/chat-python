@@ -25,5 +25,5 @@ class WebSocketChatHandler(tornado.websocket.WebSocketHandler):
 
 chat = tornado.web.Application([(r'/chat', WebSocketChatHandler), (r'/', IndexHandler)])
 
-chat.listen(80)
+chat.listen(8080)
 tornado.ioloop.IOLoop.instance().start()
